@@ -15,3 +15,8 @@ def add_static_dir(app):
 
 def setup(app):
     app.connect('builder-inited', add_static_dir)
+    return {
+        'version': '0.3',
+        'parallel_read_safe': True,
+        'parallel_write_safe': True,
+    }
