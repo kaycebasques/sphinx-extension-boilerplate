@@ -1,3 +1,4 @@
 build
 dist
 extotype.egg-info
+extotype/__pycache__
