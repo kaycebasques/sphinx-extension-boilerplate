@@ -6,7 +6,7 @@ def install_requires():
 
 setup(
     name='extotype',
-    version='0.6',
+    version='0.7',
     packages=find_packages(),
     install_requires=install_requires(),
     classifiers=[],
