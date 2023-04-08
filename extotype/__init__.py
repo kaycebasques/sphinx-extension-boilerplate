@@ -3,7 +3,7 @@ from sphinx.jinja2glue import SphinxFileSystemLoader
 from sphinx.application import Sphinx
 # from docutils import nodes
 # from hashlib import md5
-from llama_index import SimpleDirectoryReader, SimpleNodeParser, GPTSimpleVectorIndex
+from llama_index import GPTSimpleVectorIndex, SimpleDirectoryReader
 
 data = {}
 
@@ -30,9 +30,7 @@ def generate_index(app, exception):
     if app.builder.name != 'text':
         return
     documents = SimpleDirectoryReader(app.outdir).load_data()
-    parser = SimpleNodeParser()
-    nodes = parser.get_nodes_from_documents(documents)
-    index = GPTSimpleVectorIndex.from_documents(nodes)
+    index = GPTSimpleVectorIndex.from_documents(documents)
     index.save_to_disk(path.join(app.outdir, 'index.json'))
 
 def setup(app):
