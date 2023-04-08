@@ -2,3 +2,4 @@ build
 dist
 extotype.egg-info
 extotype/__pycache__
+venv
