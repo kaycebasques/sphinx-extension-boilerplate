@@ -19,3 +19,7 @@ twine upload dist/*
 username = <TODO>
 password = <TODO>
 ```
+
+### Notes
+
+* https://www.sphinx-doc.org/en/master/development/theming.html#distribute-your-theme-as-a-python-package
